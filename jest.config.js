@@ -1,8 +1,8 @@
 module.exports = {
-  collectCoverageFrom: ["<rootDir>/src/lib/todo/reducer.js"],
+  collectCoverageFrom: ["<rootDir>/src/assignment/calculator/reducer.js"],
   testRegex: "(/__tests_/.*|\\.(spec))\\.(js)$",
   coverageReporters: ["html", "text-summary"],
-  coverageDirectory: "<rootDir>/coverage",
+  coverageDirectory: "<rootDir>/src/assignment/calculator/coverage",
   coverageThreshold: {
     global: {
       branches: 80,
