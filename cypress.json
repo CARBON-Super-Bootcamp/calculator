@@ -1,6 +1,6 @@
 {
   "baseUrl": "http://localhost:5757",
-  "integrationFolder": "e2e-testing",
+  "integrationFolder": "src/assignment/calculator/e2e-testing",
   "fixturesFolder": false,
   "pluginsFile": false,
   "supportFile": false

@@ -1,0 +1,11 @@
+{
+    "all": true,
+    "include": [
+      "src/assignment/calculator/e2e-testing"
+    ],
+    "exclude": [
+      "e2e-testing",
+      "src/assignment/calculator/unit-test",
+      "src/unit-test"
+    ]
+  }
