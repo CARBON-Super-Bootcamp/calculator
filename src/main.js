@@ -1,2 +1,2 @@
-require('./lib/todo/app');
+require('./assignment/calculator/app');
 

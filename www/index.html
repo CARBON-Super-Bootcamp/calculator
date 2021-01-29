@@ -1,20 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>State Management</title>
-  </head>
-  <body>
-    <form id="todo-form" action="" method="post">
-      <input type="text" id="todo" placeholder="tulis kerjaan baru kamu..." />
-      <button type="submit">tambah</button>
-    </form>
-    <hr />
-    <h4>daftar kerjaans</h4>
-    <button id="todo-clear">Kosongkan Data</button>
-    <ol id="todo-list"></ol>
-  </body>
+<html>
 
-  <script type="text/javascript" src="./main.js"></script>
+<head>
+  <title>Calculator Webpack</title>
+</head>
+
+<body>
+  
+  <div class="container"> 
+      <div>
+        <select id="save" style="display: none;">
+          <option value="" disabled selected>Pilih angka tersimpan</option>
+        </select>
+      </div>
+      <input type="text" id="panel-calc" value="0" disabled>
+      <button class="btn btn-top" id="num-m" data-action="M">M</button>
+      <button class="btn btn-top" id="num-n" data-action="N">N</button>
+      <button class="btn btn-top" id="num-clear" data-action="clear">C</button>
+      <button class="btn btn-top" id="num-del" data-action="del">Hapus</button>
+      
+
+      <button class="btn btn-number" id="num-7" data-action="7">7</button>
+      <button class="btn btn-number" id="num-8" data-action="8">8</button>
+      <button class="btn btn-number" id="num-9" data-action="9">9</button>
+      <button class="btn btn-number" id="num-mul" data-action="x"> X </button>
+
+      <button class="btn btn-number" id="num-4" data-action="4">4</button>
+      <button class="btn btn-number" id="num-5" data-action="5">5</button>
+      <button class="btn btn-number" id="num-6" data-action="6">6</button>
+      <button class="btn btn-number" id="num-dev" data-action="/"> / </button>
+
+      <button class="btn btn-number" id="num-1" data-action="1">1</button>
+      <button class="btn btn-number" id="num-2" data-action="2">2</button>
+      <button class="btn btn-number" id="num-3" data-action="3">3</button>
+      <button class="btn btn-number" id="num-plus" data-action="+"> + </button>
+
+
+      <button class="btn btn-number" id="num-7" data-action="0">0</button>
+      <button class="btn btn-equal"  id="num-eq" data-action="="> = </button>
+      <button class="btn btn-number" id="num-sub" data-action="-"> - </button>
+  </div>
+</body>
+
+<script type="text/javascript" src="./main.js"></script>
+
 </html>
