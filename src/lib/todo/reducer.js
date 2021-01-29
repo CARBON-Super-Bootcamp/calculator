@@ -26,7 +26,9 @@ function remove(state, action) {
 }
 
 function clearAll(state) {
-  state = [];
+  while (state.length) {
+    state.pop();
+  }
   return state;
 }
 
@@ -36,5 +38,5 @@ module.exports = {
   done,
   undone,
   remove,
-  clearAll
+  clearAll,
 };
