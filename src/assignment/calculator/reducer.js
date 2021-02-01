@@ -30,7 +30,8 @@ function write(state, action) {
             state = '0'
             break
         case 'equal':
-            if (state.includes('√')){  
+            let root = state.includes('√')
+            if (root){  
                 angka = state.replace('√','')
                 state = Math.sqrt(angka).toString()
                 break
