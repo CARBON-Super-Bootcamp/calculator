@@ -1,6 +1,6 @@
 {
   "name": "hello-redux",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,6 @@
     "dev": "webpack serve --open --mode development",
     "test": "jest --coverage",
     "cypress:open": "cypress open"
-
   },
   "author": "",
   "license": "ISC",
