@@ -1,7 +1,10 @@
 # Tugas
 
-1. Membuat unit test aplikasi kalkulator, coverage semua 100% (statements, branches, function, lines)
-2. Membuat e2e test aplikasi kalkulator, semua element kalkulator (0-9, + - x : =, dll) ditest
+- Buat organisasi baru di github per kelompok
+- Invite @rimara14, @hasanlussa, @rahmatullahap ke organisasi tsb
+- Tambahkan Fitur Pangkat (x<sup>y</sup>), Akar (n-th root), Faktorial (n!)
+- Gunakan GITFLOW workflow dalam pengembangan fitur
+- Buat issue untuk setiap fitur request (tambahkan label yang sesuai)
+- Gunakan Pull Request pada proses merging ke branch develop & master
+- Setiap anggota wajib melakukan code review terhadap pull request dari anggota lain dalam kelompoknya
 
-## Advance
-1. keluarkan e2e test coverage 100%
