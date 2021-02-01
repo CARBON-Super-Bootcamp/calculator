@@ -6,6 +6,11 @@ const memoryState = []
 function write(state, action) {
     switch (action.payload.type) {
         case 'operator':
+            if (action.payload.val == '√'){
+                state = '√'
+                break
+            }
+            
             state += action.payload.val
             break
         case 'number':
@@ -25,6 +30,11 @@ function write(state, action) {
             state = '0'
             break
         case 'equal':
+            if (state.includes('√')){  
+                angka = state.replace('√','')
+                state = Math.sqrt(angka).toString()
+                break
+            }
             state = eval(state.replace('x', '*')).toString()
             break
         default:
