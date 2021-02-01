@@ -82,6 +82,24 @@ describe("write function", () => {
         };
         expect(write(initialState, action)).toBe(initialState);
     });
+
+    test("write operator", () => {
+      initialState = '0';
+      const action = {
+        type: "write",
+        payload: {val:'√',type:'operator'},
+      };
+      expect(write(initialState, action)).toBe("√");
+  });
+
+  test("write result", () => {
+      initialState = '√4';
+      const action = {
+        type: "write",
+        payload: {val:'',type:'equal'},
+      };
+      expect(write(initialState, action)).toBe("2");
+  });
 });
 
 describe("remove function", () => {
@@ -120,5 +138,7 @@ describe("remove function", () => {
         };
         expect(write(initialState, action)).toBe("0");
     });
+
+    
 });
 
