@@ -29,14 +29,50 @@ describe("write function", () => {
         expect(write(initialState, action)).toBe("10+");
     });
 
-    test("write result", () => {
+    test("write result with (+) operator", () => {
         initialState = '1+3';
         const action = {
           type: "write",
           payload: {val:'',type:'equal'},
         };
-        expect(write(initialState, action)).toBe("4");
+        expect(write(initialState, action)).toBe(4);
     });
+
+    test("write result with (-) operator", () => {
+        initialState = '5-3';
+        const action = {
+          type: "write",
+          payload: {val:'',type:'equal'},
+        };
+        expect(write(initialState, action)).toBe(2);
+    });
+
+    test("write result with (*) operator", () => {
+        initialState = '5x3';
+        const action = {
+          type: "write",
+          payload: {val:'',type:'equal'},
+        };
+        expect(write(initialState, action)).toBe("15");
+    });
+
+    test("write result with (/) operator", () => {
+        initialState = '6/3';
+        const action = {
+          type: "write",
+          payload: {val:'',type:'equal'},
+        };
+        expect(write(initialState, action)).toBe(2);
+    });
+
+    test("write result with (**) operator", () => {
+      initialState = '2^3';
+      const action = {
+        type: "write",
+        payload: {val:'', type: 'equal'},
+      };
+      expect(write(initialState, action)).toBe("8");
+    })
 
     test("write invalid type", () => {
         initialState = '2/5';
