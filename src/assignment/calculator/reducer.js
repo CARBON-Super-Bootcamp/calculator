@@ -36,7 +36,13 @@ function write(state, action) {
                 state = Math.sqrt(angka).toString()
                 break
             }
-            state = eval(state.replace('x', '*')).toString()
+            if(state.includes('x')){
+                state = eval(state.replace('x', '*')).toString()
+            } else if(state.includes('^')){
+                state = eval(state.replace('^', '**')).toString()
+            } else {
+                state = eval(state)
+            }
             break
         default:
             break

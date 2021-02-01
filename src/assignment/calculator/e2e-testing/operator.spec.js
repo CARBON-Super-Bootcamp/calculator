@@ -50,4 +50,12 @@ describe('test button operator', () => {
         cy.get('#num-9').click()
         cy.get('#panel-calc').should('value', '√49')
     })
+    
+    it('test operator ** ', () => {
+        cy.get('#num-2').click()
+        cy.get('#num-pow').click()
+        cy.get('#num-3').click()
+        cy.get('#panel-calc').should('value', '2^3')
+
+    })
 })
