@@ -30,7 +30,21 @@ function write(state, action) {
             state = '0'
             break
         case 'equal':
+
+            let isFactorial = state.includes("!");       
+            if(isFactorial){
+                let number = parseInt(state.replace('!',''));
+                let result =1;
+
+                for (let i = 1; i <= number; i++) {
+                    result = result * i;
+                }
+                state = result.toString();
+                break;
+            }
+
             let root = state.includes('√')
+            
             if (root){  
                 angka = state.replace('√','')
                 state = Math.sqrt(angka).toString()

@@ -83,23 +83,41 @@ describe("write function", () => {
         expect(write(initialState, action)).toBe(initialState);
     });
 
-    test("write operator", () => {
-      initialState = '0';
+    test("write operator factorial", () => {
+      initialState = '20';
       const action = {
         type: "write",
-        payload: {val:'√',type:'operator'},
+        payload: {val:'!',type:'operator'},
       };
-      expect(write(initialState, action)).toBe("√");
-  });
+      expect(write(initialState, action)).toBe("20!");
+    });
 
-  test("write result", () => {
+    test("write result operator factorial", () => {
+      initialState = '4!';
+      const action = {
+        type: "write",
+        payload: {val:'',type:'equal'},
+      };
+      expect(write(initialState, action)).toBe("24");
+    });
+
+    test("write result", () => {
       initialState = '√4';
       const action = {
         type: "write",
         payload: {val:'',type:'equal'},
       };
       expect(write(initialState, action)).toBe("2");
-  });
+    });
+
+    test("write operator root", () => {
+      initialState = '0';
+      const action = {
+        type: "write",
+        payload: {val:'√',type:'operator'},
+      };
+      expect(write(initialState, action)).toBe("√");
+    });
 });
 
 describe("remove function", () => {
