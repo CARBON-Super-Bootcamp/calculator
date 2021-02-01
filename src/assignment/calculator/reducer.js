@@ -25,7 +25,12 @@ function write(state, action) {
             state = '0'
             break
         case 'equal':
-            state = eval(state.replace('x', '*')).toString()
+            if(state.includes('x')){
+                state = eval(state.replace('x', '*')).toString()
+            }
+            if(state.includes('^')){
+                state = eval(state.replace('^', '**')).toString()
+            }
             break
         default:
             break
