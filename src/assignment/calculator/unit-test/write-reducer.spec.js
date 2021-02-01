@@ -46,6 +46,25 @@ describe("write function", () => {
         };
         expect(write(initialState, action)).toBe(initialState);
     });
+
+    test("write operator factorial", () => {
+      initialState = '20';
+      const action = {
+        type: "write",
+        payload: {val:'!',type:'operator'},
+      };
+      expect(write(initialState, action)).toBe("20!");
+    });
+
+    test("write result operator factorial", () => {
+      initialState = '4!';
+      const action = {
+        type: "write",
+        payload: {val:'',type:'equal'},
+      };
+      expect(write(initialState, action)).toBe("24");
+    });
+    
 });
 
 describe("remove function", () => {

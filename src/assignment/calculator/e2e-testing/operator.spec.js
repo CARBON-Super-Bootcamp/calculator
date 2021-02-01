@@ -43,4 +43,10 @@ describe('test button operator', () => {
         cy.get('#num-eq').click()
         cy.get('#panel-calc').should('value', '3')
     })
+
+    it('test operator ! ', () => {
+        cy.get('#num-7').click()
+        cy.get('#num-faktorial').click()
+        cy.get('#panel-calc').should('value', '7!')
+    })
 })

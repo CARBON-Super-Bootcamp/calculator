@@ -24,15 +24,17 @@ function write(state, action) {
         case 'clear':
             state = '0'
             break
-        case 'equal':        
-            if(state.includes("!")){
+        case 'equal':
+
+            let isFactorial = state.includes("!");       
+            if(isFactorial){
                 let number = parseInt(state.replace('!',''));
                 let result =1;
 
                 for (let i = 1; i <= number; i++) {
                     result = result * i;
                 }
-                state = result;
+                state = result.toString();
                 break;
             }
 
