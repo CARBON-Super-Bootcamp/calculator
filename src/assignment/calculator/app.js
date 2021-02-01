@@ -49,7 +49,7 @@ number$.subscribe((val) => {
             showOption();
             break
         default:
-            let isOperator = ['x', '/', '+', '-'].includes(val);
+            let isOperator = ['x', '/', '+', '-','!'].includes(val);
             if (isOperator){
                 store$.dispatch(writeAction({ val: val, type: 'operator' }))
             }

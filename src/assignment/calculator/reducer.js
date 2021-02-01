@@ -24,8 +24,19 @@ function write(state, action) {
         case 'clear':
             state = '0'
             break
-        case 'equal':
-            state = eval(state.replace('x', '*')).toString()
+        case 'equal':        
+            if(state.includes("!")){
+                let number = parseInt(state.replace('!',''));
+                let result =1;
+
+                for (let i = 1; i <= number; i++) {
+                    result = result * i;
+                }
+                state = result;
+                break;
+            }
+
+            state = eval(state.replace('x', '*')).toString();
             break
         default:
             break
