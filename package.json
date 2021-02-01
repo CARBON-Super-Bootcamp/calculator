@@ -8,7 +8,6 @@
     "dev": "webpack serve --open --mode development",
     "test": "jest --coverage",
     "cypress:open": "cypress open"
-
   },
   "author": "",
   "license": "ISC",
